@@ -1,33 +1,20 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
-// import useRequest from '@app/common/hooks/useRequest'
 import useRequest from '@ahooksjs/use-request'
-import { useSelector } from '../store'
-
-import store from './store'
+import store, { useSelector } from '../store'
 
 function App() {
-  console.log('rth ')
-  const req = useRequest(store.getMenu)
+  const req = useRequest(store.loadMenu, { manual: true })
+  const contentReq = useRequest(store.loadContent, { manual: true })
   const loading = useSelector(() => store.loading)
   const menu = useSelector(() => store.menu)
-
-  const [content, setContent] = useState('')
+  const content = useSelector(() => store.content.data)
   useEffect(() => {
     req.run()
-    const readmePath = require('../README_zh-tw.md')
-
-    fetch(readmePath)
-      .then(response => {
-        return response.text()
-      })
-      .then(text => {
-        console.log('text', text)
-        setContent(text)
-      })
+    contentReq.run()
   }, [])
-
+  if (loading) return 'is loading...'
   return <ReactMarkdown children={content} remarkPlugins={[remarkGfm]} />
 }
 

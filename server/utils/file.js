@@ -6,9 +6,7 @@ const infoFile = 'structure.json'
 function readFile(path) {
   try {
     return JSON.parse(fs.readFileSync(path))
-  } catch (e) {
-    console.log('e', e)
-  }
+  } catch {}
 }
 
 function getFolderStructure() {
