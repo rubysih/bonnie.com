@@ -1,6 +1,6 @@
 const fs = require('fs')
 
-const folder = 'src/assets/contents'
+const folder = 'public/contents'
 const infoFile = 'structure.json'
 
 function readFile(path) {

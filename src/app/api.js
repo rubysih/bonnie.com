@@ -15,5 +15,8 @@ export const loadMenu = () =>
 export const loadContent = subPath =>
   axios
     .get(`contents/general/README_zh-cn.md`)
-    .then(res => res)
+    .then(function ({ data, status, statusText }) {
+      if (status === StatusCode.OK) return data
+      throw new Error(`${status}: ${statusText}`)
+    })
     .catch(e => console.log('e', e))
