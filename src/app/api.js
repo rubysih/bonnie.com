@@ -12,9 +12,9 @@ export const loadMenu = () =>
       console.log('api err', error)
     })
 
-export const loadContent = subPath =>
+export const loadContent = (subPath, lang) =>
   axios
-    .get(`contents/general/README_zh-cn.md`)
+    .get(`contents/${subPath}/README_${lang}.md`)
     .then(function ({ data, status, statusText }) {
       if (status === StatusCode.OK) return data
       throw new Error(`${status}: ${statusText}`)

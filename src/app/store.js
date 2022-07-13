@@ -4,9 +4,6 @@ import * as api from './api'
 
 @store
 class AppStore {
-  @observable
-  loading = true
-
   @observable.ref
   menu = undefined
 
@@ -15,14 +12,12 @@ class AppStore {
 
   @flow
   *loadMenu() {
-    this.error = undefined
     this.menu = yield api.loadMenu()
-    this.loading = false
   }
 
   @flow
-  *loadContent(subPath) {
-    this.content = yield api.loadContent(subPath)
+  *loadContent({ subPath, lang }) {
+    this.content = yield api.loadContent(subPath, lang)
   }
 }
 
