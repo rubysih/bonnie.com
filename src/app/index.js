@@ -17,7 +17,7 @@ function App() {
   const i18nReq = useRequest(store.loadI18n, { manual: true })
   const menu = useSelector(() => store.menu)
   const content = useSelector(() => store.content)
-  const i18n = useSelector(() => store.getI18n)
+  const i18n = useSelector(store.getI18n)
   const lang = useSelector(() => store.lang)
   const [showItemPath, setShowItemPath] = useState()
   const [subMenu, setSubMenu] = useState()
@@ -27,6 +27,8 @@ function App() {
   useEffect(() => showItemPath && contentReq.run(showItemPath), [showItemPath])
 
   useEffect(() => menu && setShowItemPath([menu[0].directoryName]), [menu])
+
+  useEffect(() => i18nReq.run() && contentReq.run(showItemPath), [lang])
 
   if (!menu) return null
 
