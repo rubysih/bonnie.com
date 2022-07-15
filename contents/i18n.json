@@ -25,6 +25,10 @@
       {
         "displayKey": "{esport.pubg}",
         "displayValue": "絕地求生"
+      },
+      {
+        "displayKey": "{nodata}",
+        "displayValue": "暫無數據"
       }
     ]
   },
@@ -54,6 +58,10 @@
       {
         "displayKey": "{esport.pubg}",
         "displayValue": "绝地求生"
+      },
+      {
+        "displayKey": "{nodata}",
+        "displayValue": "暂无数据"
       }
     ]
   }
