@@ -9,6 +9,11 @@ function keyBy(arr, key, contentKey) {
   )
 }
 
+function sortMenu(arr) {
+  if (!arr) return
+  return arr.sort((a, b) => a.displayOrder - b.displayOrder)
+}
+
 @store
 class AppStore {
   @observable.ref
@@ -26,11 +31,14 @@ class AppStore {
   @flow
   *loadMenu() {
     const menu = yield api.loadMenu()
-
+    const menuAfterSort = sortMenu(menu)
     const subMenu = yield Promise.allSettled(
-      menu.map(i => api.loadSubMenu([i.directoryName]))
+      menuAfterSort.map(i => api.loadSubMenu([i.directoryName]))
     ).then(res => res.map(i => i.value))
-    this.menu = menu.map((i, index) => ({ ...i, children: subMenu[index] }))
+    this.menu = menuAfterSort.map((i, index) => ({
+      ...i,
+      children: sortMenu(subMenu[index])
+    }))
   }
 
   @flow

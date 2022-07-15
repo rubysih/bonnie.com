@@ -19,18 +19,14 @@ function App() {
   const content = useSelector(() => store.content)
   const i18n = useSelector(() => store.getI18n)
   const lang = useSelector(() => store.lang)
-  const [showItemPath, setShowItemPath] = useState('')
+  const [showItemPath, setShowItemPath] = useState()
   const [subMenu, setSubMenu] = useState()
 
-  useEffect(() => {
-    req.run()
-    i18nReq.run()
-    contentReq.run(['football'])
-  }, [])
+  useEffect(() => req.run() && i18nReq.run(), [])
 
-  useEffect(() => {
-    contentReq.run(showItemPath)
-  }, [showItemPath])
+  useEffect(() => showItemPath && contentReq.run(showItemPath), [showItemPath])
+
+  useEffect(() => menu && setShowItemPath([menu[0].directoryName]), [menu])
 
   if (!menu) return null
 
@@ -64,6 +60,7 @@ function App() {
                   subMenu === i.directoryName &&
                   i.children.map(c => (
                     <div
+                      key={c.directoryName}
                       className="menuItem subMenu"
                       onClick={() =>
                         setShowItemPath([i.directoryName, c.directoryName])
@@ -77,8 +74,10 @@ function App() {
           })}
         </div>
         <div className="content">
-          {showItemPath && (
+          {showItemPath && content ? (
             <ReactMarkdown children={content} remarkPlugins={[remarkGfm]} />
+          ) : (
+            i18n['{nodata}']
           )}
         </div>
       </div>
