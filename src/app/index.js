@@ -6,6 +6,11 @@ import { useSelector } from '../store'
 import store from './store'
 import './App.css'
 
+const Lang = [
+  { key: 'zh-cn', display: '简体中文' },
+  { key: 'zh-tw', display: '繁體中文' }
+]
+
 function App() {
   const req = useRequest(store.loadMenu, { manual: true })
   const contentReq = useRequest(store.loadContent, { manual: true })
@@ -13,6 +18,7 @@ function App() {
   const menu = useSelector(() => store.menu)
   const content = useSelector(() => store.content)
   const i18n = useSelector(() => store.getI18n)
+  const lang = useSelector(() => store.lang)
   const [showItemPath, setShowItemPath] = useState('')
   const [subMenu, setSubMenu] = useState()
 
@@ -30,7 +36,15 @@ function App() {
 
   return (
     <div className="page">
-      <div className="topBar"></div>
+      <div className="topBar">
+        <select value={lang} onChange={e => store.setLang(e.target.value)}>
+          {Lang?.map(opt => (
+            <option key={opt.key} value={opt.key}>
+              {opt.display}
+            </option>
+          ))}
+        </select>
+      </div>
       <div className="container">
         <div className="sideBar">
           {menu.map(i => {
