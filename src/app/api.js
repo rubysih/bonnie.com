@@ -1,21 +1,49 @@
 import axios from 'axios'
 import { ServerUrl, StatusCode } from '../constants'
 
-export const loadMenu = () =>
+const folder = 'contents'
+const infoFile = 'structure.json'
+
+export const loadMenu_ = () =>
   axios
     .get(`${ServerUrl}/menu`)
-    .then(function ({ data, status, statusText }) {
+    .then(({ data, status, statusText }) => {
       if (status === StatusCode.OK) return data
       throw new Error(`${status}: ${statusText}`)
     })
-    .catch(function (error) {
-      console.log('api err', error)
-    })
+    .catch(e => console.log('api err', e))
 
 export const loadContent = (subPath, lang) =>
   axios
-    .get(`contents/${subPath}/README_${lang}.md`)
-    .then(function ({ data, status, statusText }) {
+    .get(`contents/${subPath.join('/')}/README_${lang}.md`)
+    .then(({ data, status, statusText }) => {
+      if (status === StatusCode.OK) return data
+      throw new Error(`${status}: ${statusText}`)
+    })
+    .catch(e => console.log('e', e))
+
+export const loadMenu = () =>
+  axios
+    .get(`${folder}/${infoFile}`)
+    .then(({ data, status, statusText }) => {
+      if (status === StatusCode.OK) return data
+      throw new Error(`${status}: ${statusText}`)
+    })
+    .catch(e => console.log('e', e))
+
+export const loadSubMenu = subPath =>
+  axios
+    .get(`${folder}/${subPath.join('/')}/${infoFile}`)
+    .then(({ data, status, statusText }) => {
+      if (status === StatusCode.OK) return data
+      throw new Error(`${status}: ${statusText}`)
+    })
+    .catch(e => console.log('e', e))
+
+export const loadI18n = () =>
+  axios
+    .get(`${folder}/i18n.json`)
+    .then(({ data, status, statusText }) => {
       if (status === StatusCode.OK) return data
       throw new Error(`${status}: ${statusText}`)
     })
