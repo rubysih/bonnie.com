@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktoy_customer=self.webpackChunktoy_customer||[]).push([[854],{5854:(e,s,t)=>{t.r(s),t.d(s,{default:()=>c});const c="/reading-page-poc/assets/src/static/profile/pending-prizes.png"}}]);

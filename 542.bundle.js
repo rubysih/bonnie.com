@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktoy_customer=self.webpackChunktoy_customer||[]).push([[542],{4542:(s,t,e)=>{e.r(t),e.d(t,{default:()=>a});const a="/reading-page-poc/assets/src/static/drawProbability/1.png"}}]);
