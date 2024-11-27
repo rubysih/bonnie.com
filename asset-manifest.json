@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.a8c200e8.css",
-    "main.js": "/static/js/main.3ece7216.js",
-    "static/media/gacha-hover.gif": "/static/media/gacha-hover.83cfd88d7155802993b2.gif",
-    "static/media/draw-out-animation.gif": "/static/media/draw-out-animation.db64a23442d91e4808b6.gif",
-    "static/media/gacha.png": "/static/media/gacha.6148f81f9383b58fa8b2.png",
-    "index.html": "/index.html",
-    "main.a8c200e8.css.map": "/static/css/main.a8c200e8.css.map",
-    "main.3ece7216.js.map": "/static/js/main.3ece7216.js.map"
+    "main.css": "/bonnie.com/static/css/main.a8c200e8.css",
+    "main.js": "/bonnie.com/static/js/main.186b8c44.js",
+    "static/media/gacha-hover.gif": "/bonnie.com/static/media/gacha-hover.83cfd88d7155802993b2.gif",
+    "static/media/draw-out-animation.gif": "/bonnie.com/static/media/draw-out-animation.db64a23442d91e4808b6.gif",
+    "static/media/gacha.png": "/bonnie.com/static/media/gacha.6148f81f9383b58fa8b2.png",
+    "index.html": "/bonnie.com/index.html",
+    "main.a8c200e8.css.map": "/bonnie.com/static/css/main.a8c200e8.css.map",
+    "main.186b8c44.js.map": "/bonnie.com/static/js/main.186b8c44.js.map"
   },
   "entrypoints": [
     "static/css/main.a8c200e8.css",
-    "static/js/main.3ece7216.js"
+    "static/js/main.186b8c44.js"
   ]
 }
