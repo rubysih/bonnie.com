@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunktoy_customer=self.webpackChunktoy_customer||[]).push([[338],{6338:(e,t,u)=>{u.r(t),u.d(t,{default:()=>n});var c=u(7767),s=u(9344),f=u(6540);function n(){var e=(0,c.Zp)();(0,f.useEffect)((function(){e(s.Ay.index)}),[])}}}]);

@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunktoy_customer=self.webpackChunktoy_customer||[]).push([[84],{2084:(s,e,t)=>{t.r(e),t.d(e,{default:()=>c});const c="/reading-page-poc/assets/src/static/profile/consume-log.png"}}]);

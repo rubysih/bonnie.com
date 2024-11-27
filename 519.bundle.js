@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunktoy_customer=self.webpackChunktoy_customer||[]).push([[519],{5519:(s,c,e)=>{e.r(c),e.d(c,{default:()=>t});const t="/reading-page-poc/assets/src/static/favicon.ico"}}]);
