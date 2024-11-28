@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/bonnie.com/static/css/main.a8c200e8.css",
-    "main.js": "/bonnie.com/static/js/main.ef8e25e9.js",
+    "main.js": "/bonnie.com/static/js/main.c0a56d59.js",
     "static/media/gacha-hover.gif": "/bonnie.com/static/media/gacha-hover.83cfd88d7155802993b2.gif",
     "static/media/draw-out-animation.gif": "/bonnie.com/static/media/draw-out-animation.db64a23442d91e4808b6.gif",
     "static/media/gacha.png": "/bonnie.com/static/media/gacha.6148f81f9383b58fa8b2.png",
     "static/media/gacha-done.png": "/bonnie.com/static/media/gacha-done.261b084ee7b69348ffb0.png",
     "index.html": "/bonnie.com/index.html",
     "main.a8c200e8.css.map": "/bonnie.com/static/css/main.a8c200e8.css.map",
-    "main.ef8e25e9.js.map": "/bonnie.com/static/js/main.ef8e25e9.js.map"
+    "main.c0a56d59.js.map": "/bonnie.com/static/js/main.c0a56d59.js.map"
   },
   "entrypoints": [
     "static/css/main.a8c200e8.css",
-    "static/js/main.ef8e25e9.js"
+    "static/js/main.c0a56d59.js"
   ]
 }
