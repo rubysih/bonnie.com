@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/bonnie.com/static/css/main.b4ac2089.css",
-    "main.js": "/bonnie.com/static/js/main.c4188dac.js",
+    "main.css": "/bonnie.com/static/css/main.7d140ebc.css",
+    "main.js": "/bonnie.com/static/js/main.58d1b469.js",
     "index.html": "/bonnie.com/index.html",
-    "main.b4ac2089.css.map": "/bonnie.com/static/css/main.b4ac2089.css.map",
-    "main.c4188dac.js.map": "/bonnie.com/static/js/main.c4188dac.js.map"
+    "main.7d140ebc.css.map": "/bonnie.com/static/css/main.7d140ebc.css.map",
+    "main.58d1b469.js.map": "/bonnie.com/static/js/main.58d1b469.js.map"
   },
   "entrypoints": [
-    "static/css/main.b4ac2089.css",
-    "static/js/main.c4188dac.js"
+    "static/css/main.7d140ebc.css",
+    "static/js/main.58d1b469.js"
   ]
 }
